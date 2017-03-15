@@ -1,0 +1,23 @@
+{
+  "name": "media-app-ui",
+  "version": "1.0.0",
+  "description": "frontend to the media manager application Ruby on rails and Angular.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snfazal/media-app-ui.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/snfazal/media-app-ui/issues"
+  },
+  "homepage": "https://github.com/snfazal/media-app-ui#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
