@@ -1,4 +1,4 @@
-angular.module('mediaAngularApp', ['ui.router']);
+angular.module('mediaAngularApp', ['ui.router'])
   .config(MediaRouter)
   .config(authInterceptor)
 

@@ -1,6 +1,6 @@
 // When only the name of the module is passed in,
 // the 'module' method returns the specified module.
-angular.module('media-app')
+angular.module('mediaAngularApp')
     .controller('homeController', homeController);
 
 // This is the function definition for our controller.
