@@ -1,11 +1,21 @@
 <div ng-controller="AuthController as auth">
 <form ng-submit"auth.signup(user)" class="signup">
+
   <!-- username -->
   <div>
     <label for="username">username</label>
-
-
+    <input type="text" ng-model="user.username">
   </div>
-
-</form>
+  <!-- email -->
+    <div>
+      <label for="email">email</label>
+      <input type="email" ng-model="user.email">
+    </div>
+  <!-- password -->
+  <div>
+    <label for="password">password</label>
+    <input type="password" ng-model="user.password">
+  </div>
+  <button type="submit">Signup!</button>
+  </form>
 </div>
