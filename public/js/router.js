@@ -15,4 +15,12 @@ function MediaRouter($stateProvider, $urlRouterProvider){
         url: '/',
         templateUrl: '/partials/home.html'
       })
+      .state('login', {
+       url: '/login',
+       templateUrl: '/partials/login.html'
+     })
+     .state('signup', {
+       url: '/signup',
+       templateUrl: '/partials/signup.html'
+     })
 }
