@@ -2,41 +2,35 @@
 <html lang="en" ng-app="mediaAngularApp">
   <head>
     <meta charset="utf-8">
-   <title>Media Manager</title>
-   <!-- link to angularjs -->
+    <title>Media Manager</title>
+    <!-- link to angularjs -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <!-- ui-router code -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
-   <!-- router -->
-   <script src="/js/router.js"></script>
-   <!-- factories -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <!-- router -->
+    <script src="/js/router.js"></script>
+    <!-- factories -->
     <script src="/js/factories/auth_interceptor.js"></script>
     <script src="/js/factories/auth_token_factory.js"></script>
-   <!-- controllers -->
+    <!-- controllers -->
     <script src="/js/controllers/home_controller.js"></script>
     <!-- APP -->
     <script src="js/app.js"></script>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
   </head>
     <body ng-controller="HomeController as home">
       <div ng-controller="AuthController as auth" class="nav">
 
+      <a ng-if="!home.currentUser" ui-sref="signup" class="nav-item">signup</a>
 
-     <div class="nav-center">
-     <img ui-sref="index" src="img/hws.jpg" alt="logo" class="nav-item">
-     <a ui-sref="index" class="nav-item">home</a>
+      <a ng-if="!home.currentUser" ui-sref="login" class="nav-item">login</a>
+
+      <a ng-if="home.currentUser" ng-click="auth.logout()" class="nav-item">logout</a>
+
+      </div>
 
 
-   <div class="nav-center">
-     <a ng-if="!home.currentUser" ui-sref="signup" class="nav-item">signup</a>
-   </div>
-     <div class="nav-right">
-     <a ng-if="!home.currentUser" ui-sref="login" class="nav-item">login</a>
-   </div>
-   <div class="nav-right">
-     <a ng-if="home.currentUser" ng-click="auth.logout()" class="nav-item">logout</a>
-   </div>
- </div>
-</div>
 
       <ui-view>
       </ui-view>

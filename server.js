@@ -1,5 +1,6 @@
 // server.js
 var express = require('express');
+var logger  = require('morgan');
 var app     = express();
 
 app.use(express.static('public'));
@@ -9,5 +10,7 @@ app.get('/', function(req, res){
 });
 
 app.listen(4000, function(){
-    console.log("app listening on port 4000");
+  console.log(`================`);
+  console.log(`ALWAYS LISTENING`);
+  console.log(`================`);
 });
