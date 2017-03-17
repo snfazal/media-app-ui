@@ -5,6 +5,7 @@ function AuthController($http, $state, $scope, $rootScope, AuthTokenFactory){
   self.test = "hello";
 
   function signup(user) {
+    console.log('SIGNUP')
     $http.post(`${server}/users`, { user: user } )
       .then(function(response) {
         $state.go('login');
@@ -13,6 +14,7 @@ function AuthController($http, $state, $scope, $rootScope, AuthTokenFactory){
   self.signup = signup;
 
   function login(user) {
+    console.log('LOGIN')
     $http.post(`${server}/users/login`,
     { user: user} )
     .then(function(res){
