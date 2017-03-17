@@ -1,11 +1,11 @@
 function AuthController($http, $state, $scope, $rootScope, AuthTokenFactory){
   var self = this;
-  var server = 'http://localhost:4000/#/';
+  var server = 'http://localhost:3000';
 
   self.test = "hello";
 
-  function signup(userPass) {
-    $http.post(`${server}/users`, { user: userPass } )
+  function signup(user) {
+    $http.post(`${server}/users`, { user: user } )
       .then(function(response) {
         $state.go('login');
       });
@@ -20,7 +20,6 @@ function AuthController($http, $state, $scope, $rootScope, AuthTokenFactory){
 
       $scope.$emit('userLoggedIn', res.data.user);
       $rootScope.$emit('fetchData', res.data.user);
-      $state.go('view_favorites');
     });
   }
 
