@@ -13,10 +13,20 @@ function MediaController($http, $state, $scope){
   self.createMedia = createMedia;
 
   function getMedia() {
-    $http.get(`{server}/media`)
-    .then(function(res){
-      self.allMedia = res.data.wines;
+    $http.get(`${server}/media`)
+    .then(function(res) {
+      self.allMedia = res.data.media;
       console.log(self.allMedia);
     })
   }
+  self.getMedia = getMedia;
+  getMedia();
+
+  function showMedia(media) {
+    self.nowShowing = media;
+    $scope.$emit('nowShowing', self.nowShowing);
+    $state.go('show_media');
+  }
+  self.showMedia = showMedia;
+  
 }

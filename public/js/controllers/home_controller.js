@@ -14,8 +14,8 @@ function HomeController($scope, $http) {
   });
 
   //user log out
-  $scope.$on('nowShowing', function(event, data) {
-    self.nowShowing = data;
+  $scope.$on('userLoggedOut', function(event, data) {
+    self.currentUser = data;
   });
 
   //show links page

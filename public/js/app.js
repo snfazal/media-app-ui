@@ -2,6 +2,6 @@
 angular.module('mediaAngularApp')
   .controller('HomeController', HomeController)
   .controller('AuthController', AuthController)
-  // .controller('MediaController', MediaController)
+  .controller('MediaController', MediaController)
   .factory('AuthTokenFactory', AuthTokenFactory)
   .factory('AuthInterceptor', AuthInterceptor)

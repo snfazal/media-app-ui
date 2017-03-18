@@ -1,0 +1,11 @@
+<div ng-controller="MediaController as media" class="">
+  <div ng-if="!media.showEdit">
+
+  <img ng-src="{{media.nowShowing}}">
+    <ul>
+      <li>Name: {{home.nowShowing.name}}</li>
+      <li>Type of link: {{home.nowShowing.linkable_type}}</li>
+    </ul>
+  </div>
+  <button ng-if="home.currentUser.id == home.nowShowing.user_id" ng-click="media.showEdit = !media.showEdit" type="button" name="button">Edit Links</button>
+</div>
