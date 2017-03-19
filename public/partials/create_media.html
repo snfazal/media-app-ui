@@ -1,9 +1,12 @@
 <div ng-controller="MediaController as media">
   <form ng-submit=media.createMedia(media)>
+    <!-- name or title  -->
     <label for="name">name</label>
     <input name="name" type="text" ng-model="media.name">
+    <!-- media link -->
     <label for="linkable_type">link type</label>
     <input name="linkable_type" type="text" ng-model="media.linkable_type">
+    <!-- submit -->
     <input type="submit">
   </form>
 </div>

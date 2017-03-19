@@ -4,8 +4,11 @@
   <img ng-src="{{media.nowShowing}}">
     <ul>
       <li>Name: {{home.nowShowing.name}}</li>
-      <li>Type of link: {{home.nowShowing.linkable_type}}</li>
+      <li>Link: {{home.nowShowing.linkable_type}}</li>
     </ul>
   </div>
+  <!-- edit button -->
   <button ng-if="home.currentUser.id == home.nowShowing.user_id" ng-click="media.showEdit = !media.showEdit" type="button" name="button">Edit Links</button>
+
+  <!-- Delete button -->
 </div>

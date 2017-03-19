@@ -10,6 +10,7 @@ function HomeController($scope, $http) {
 
   //user login
   $scope.$on('userLoggedIn', function(event, data){
+    console.log('LOGGED IN USER')
     self.currentUser = data;
   });
 
