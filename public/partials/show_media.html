@@ -1,15 +1,22 @@
 <div ng-controller="MediaController as media" class="">
   <div ng-if="!media.showEdit">
 
-  <img ng-src="{{media.nowShowing}}">
     <ul>
       <li>Name: {{home.nowShowing.name}}</li>
       <li>Link: {{home.nowShowing.linkable_type}}</li>
-      
+
     </ul>
   </div>
   <!-- edit button -->
   <button ng-if="home.currentUser.id == home.nowShowing.user_id" ng-click="media.showEdit = !media.showEdit" type="button" name="button">Edit Links</button>
 
   <!-- Delete button -->
+  <button ng-if="home.currentUser.id == home.nowShowing.user_id" ng-click="media.deleteMedia(home.nowShowing)" type="button" name="button">Delete Media</button>
+  <div ng-if="media.showEdit">
+    <form ng-submit="media.editMedia(home.nowShowing)">
+      <div>Name: <input ng-model="home.nowShowing.name" type="text" name="name" placeholder="{{home.nowShowing.name}}"></div>
+      <div>Link: <input ng-model="home.nowShowing.linkable_type" type="text" name="linkeable_type" placeholder="{{home.nowShowing.linkable_type}}"></div>
+      <div><input type="submit"></div>
+    </form>
+  </div>
 </div>
