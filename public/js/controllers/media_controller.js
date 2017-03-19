@@ -4,7 +4,7 @@ function MediaController($http, $state, $scope){
 
   function createMedia(media){
     console.log(media);
-    $http.post(`${server}/media`, {media: media})
+    $http.post(`${server}/media`, {media})
     .then(function(res){
       console.log(res);
       $state.go('index')
@@ -28,5 +28,5 @@ function MediaController($http, $state, $scope){
     $state.go('show_media');
   }
   self.showMedia = showMedia;
-  
+
 }

@@ -8,8 +8,8 @@ function AuthController($http, $state, $scope, $rootScope, AuthTokenFactory){
     console.log('SIGNUP')
     $http.post(`${server}/users`, { user: user } )
       .then(function(response) {
-        $state.go('login');
       });
+      $state.go('login');
   }
   self.signup = signup;
 
@@ -24,6 +24,7 @@ function AuthController($http, $state, $scope, $rootScope, AuthTokenFactory){
       $scope.$emit('userLoggedIn', res.data.user);
       $rootScope.$emit('fetchData', res.data.user);
     });
+    $state.go('create_media');
   }
 
   self.login = login;
