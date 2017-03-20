@@ -1,8 +1,15 @@
-body {
-  background-color: papayawhip;
-}
 
-button {
+.create-form {
+  text-align: center;
+  padding: 50px;
+}
+.create_media {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1.2em;
+  text-transform: capitalize;
+}
+.button {
   padding:10px top;
   background-color: #dcdcdc;
   border: 1px solid #666;
