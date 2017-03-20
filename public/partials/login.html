@@ -1,5 +1,5 @@
 
-<div ng-controller="AuthController as auth">
+<div ng-controller="AuthController as auth" class="login">
   <form ng-submit="auth.login(user)">
     <!-- email -->
     <div>
@@ -11,6 +11,6 @@
       <label for="password" class="label">password</label>
       <input class="input" type="password" ng-model="user.password">
     </div>
-      <button type="submit">Login!</button>
+      <button class="button" type="submit">Login</button>
   </form>
 </div>
