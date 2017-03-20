@@ -5,7 +5,7 @@ function AuthController($http, $state, $scope, $rootScope, AuthTokenFactory){
   self.test = "hello";
 
   function signup(user) {
-    console.log('SIGNUP')
+    // console.log('SIGNUP')
     $http.post(`${server}/users`, { user: user } )
       .then(function(response) {
       });
@@ -14,11 +14,11 @@ function AuthController($http, $state, $scope, $rootScope, AuthTokenFactory){
   self.signup = signup;
 
   function login(user) {
-    console.log('LOGIN')
+    // console.log('LOGIN')
     $http.post(`${server}/users/login`,
     { user: user} )
     .then(function(res){
-      console.log('RESPONSE', res)
+      // console.log('RESPONSE', res)
       AuthTokenFactory.setToken(res.data.token)
 
       $scope.$emit('userLoggedIn', res.data.user);

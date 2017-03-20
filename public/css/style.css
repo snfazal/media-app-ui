@@ -46,8 +46,8 @@
   background-color: papayawhip;
   top: 0;
   width: 100%;
-  display: flex;
-  flex-flow: row;
+  /*display: flex;
+  flex-flow: row;*/
   justify-content: space-between;
   align-items: center;
   font-family: sans-serif;
