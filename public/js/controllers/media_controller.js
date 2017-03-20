@@ -29,7 +29,7 @@ function MediaController($http, $state, $scope){
     $state.go('show_media');
   }
   self.showMedia = showMedia;
-  showMedia();
+
 
   function editMedia(media){
     $http.put(`${server}/media/${media.id}`, angular.toJson(media))
