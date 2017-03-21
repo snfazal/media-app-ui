@@ -17,6 +17,7 @@ function MediaController($http, $state, $scope){
     .then(function(res) {
       self.allMedia = res.data.media;
       console.log(self.allMedia);
+      // $state.go('create_media')
     })
   }
   self.getMedia = getMedia;
@@ -27,6 +28,7 @@ function MediaController($http, $state, $scope){
     self.nowShowing = media;
     $scope.$emit('nowShowing', self.nowShowing);
     $state.go('show_media');
+    console.log(self.nowShowing)
   }
   self.showMedia = showMedia;
 
@@ -35,8 +37,8 @@ function MediaController($http, $state, $scope){
     $http.put(`${server}/media/${media.id}`, angular.toJson(media))
     .then(function(res){
       self.showEdit = false;
+      $state.reload()
     })
-    $state.reload()
   }
   self.editMedia = editMedia;
 

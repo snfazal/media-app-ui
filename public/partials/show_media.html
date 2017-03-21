@@ -1,4 +1,4 @@
-<div ng-controller="MediaController as media" class="">
+<div ng-controller="MediaController as media" class="show_media">
   <div ng-if="!media.showEdit">
 
     <ul>
@@ -11,7 +11,7 @@
   <button ng-if="home.currentUser.id == home.nowShowing.user_id" ng-click="media.showEdit = !media.showEdit" type="button" name="button">Edit Links</button>
 
   <!-- Delete button -->
-  <button ng-if="home.currentUser.id == home.nowShowing.user_id" ng-click="media.deleteMedia(home.nowShowing)" type="button" name="button">Delete Media</button>
+  <button ng-if="home.currentUser.id == home.nowShowing.user_id" ng-click="media.deleteMedia(home.nowShowing)" type="button" name="button">Delete</button>
   <div ng-if="media.showEdit">
     <form ng-submit="media.editMedia(home.nowShowing)">
       <div>Name: <input ng-model="home.nowShowing.name" type="text" name="name" placeholder="{{home.nowShowing.name}}"></div>
